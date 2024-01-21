@@ -118,7 +118,7 @@ h1 {
 
 .presentation {
     background-color: #FFEBCD;
-    padding: 10px 0px 20px 0;
+    padding: 10px 0px 30px 0;
 }
 
 .texte-presentation {
@@ -144,7 +144,6 @@ h1 {
     background-size: cover;
     height: 70px;
     text-shadow: 1px 3px 2px bisque;
-    margin-top: -1px;
     font-size: 3.5em;
 }
 
@@ -265,7 +264,6 @@ h1 {
     background-size: cover;
     height: 70px;
     text-shadow: 1px 3px 2px bisque;
-    margin-top: -1px;
     font-size: 3.5em;
 }
 
@@ -435,7 +433,7 @@ footer h3 {
 =                                       MEDIA QUERIES                                   =
 ========================================================================================*/
 
-/*---------- Ecran minimun à 300px ----------*/
+/*---------- Ecran minimun à 420px ----------*/
 
 @media only screen and (min-width: 420px) {
 
@@ -447,6 +445,8 @@ footer h3 {
         margin-left: 3em;
     }
 }
+
+/*---------- Ecran maximum à 420px ----------*/
 
 @media only screen and (max-width: 419px) {
 
@@ -464,5 +464,15 @@ footer h3 {
 
     .contact a {
         font-size: 2em;
+    }
+}
+
+/*---------- Ecran minimun à 1340px ----------*/
+
+@media only screen and (min-width: 1340px) {
+
+    .texte-presentation img {
+        width: 200px;
+        height: 200px;
     }
 }
