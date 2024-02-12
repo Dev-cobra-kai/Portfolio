@@ -46,7 +46,6 @@ a {
     text-decoration: none;
 }
 
-
 /*=============================================
 =            Le menu de navigation            =
 =============================================*/
@@ -118,21 +117,32 @@ h1 {
 
 .presentation {
     background-color: #FFEBCD;
-    padding: 10px 0px 30px 0;
+    padding: 10px 0 30px 0;
 }
 
-.texte-presentation {
+.texte-presentation img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    float: left;
+}
+
+.texte-presentation h2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.texte-presentation p {
     text-align: center;
-    padding: 0px 10%;
+    padding: 0px 20px;
     margin-bottom: 60px;
     font-size: 1.3em;
 }
 
-.texte-presentation img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    float: left;
+.texte-presentation p a {
+    text-decoration:underline;
+    color: #7451eb;;
 }
 
 /*=============================================
@@ -154,6 +164,7 @@ h1 {
     background: #6495ED;
     font-size: 1.8em;
     margin-bottom: -1px;
+    margin: 0 10% 0 10%;
     padding-bottom: 0.5em;
     border-radius: 50px 50px 0px 0px;
 }
@@ -167,6 +178,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 10% 2% 10%;
 }
 
 .frontend .langage-code {
@@ -191,17 +203,19 @@ h1 {
     margin-bottom: -1px;
     padding-bottom: 0.5em;
     border-radius: 50px 50px 0px 0px;
+    margin: 0 10% 0 10%;
 }
 
 .backend {
     padding-top: 20px;
     background: #90EE90;
-    padding: 10px;
+    padding: 20px;
     border-radius: 0px 0px 50px 50px;
     padding-left: 10%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 10% 2% 10%;
 }
 
 .backend .langage-code {
@@ -226,6 +240,7 @@ h1 {
     margin-bottom: -1px;
     padding-bottom: 0.5em;
     border-radius: 50px 50px 0px 0px;
+    margin: 0 10% 0 10%;
 }
 
 .techno {
@@ -237,7 +252,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 2em;
+    margin: 0 10% 2% 10%;
     /* filter: brightness(80%); */
 }
 
@@ -393,7 +408,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(images/contact/contact.jpg) no-repeat fixed 50% 30%;
+    background: url(images/contact/contact.jpg) no-repeat fixed 50% 10%;
     background-size: cover;
     height: 300px;
     color: white;
@@ -442,7 +457,15 @@ footer h3 {
     }
 
     .texte-presentation img {
-        margin-left: 3em;
+        margin-left: 2em;
+    }
+
+    .contact h3 {
+        font-size: 1.2em;
+    }
+
+    .contact a {
+        font-size: 2em;
     }
 }
 
@@ -454,8 +477,20 @@ footer h3 {
         font-size: 1.1em;
     }
 
+    /* .image-principale {
+       object-position: bottom;
+    } */
+
+    .texte-presentation h2 {
+        font-size: 1.7em;
+    }
+
+    .texte-presentation p {
+        font-size: 1.3em;
+    }
+
     .texte-presentation img {
-        margin-left: 2.7em;
+        margin-left: 1.8em;
     }
 
     .contact h3 {
