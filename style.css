@@ -430,7 +430,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(images/contact/contact.jpg) no-repeat fixed 50% 10%;
+    background: url(images/contact/contact-mobile.jpg) no-repeat fixed 50% 10%;
     background-size: cover;
     height: 430px;
     color: white;
