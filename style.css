@@ -52,10 +52,10 @@ a {
 
 nav {
     overflow: hidden;
-    background-color: #FFEFD5;
+    background-color: #faf1e3;
     position: fixed;
+    top: auto;
     width: 100%;
-    opacity: 0.9;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -71,6 +71,11 @@ header li {
     font-size: 1.7em;
 }
 
+nav ul li a:hover {
+    color: white;
+    text-shadow: 1px 0px 2px black;
+}
+
 .logo {
     font-family: 'Cookie', cursive;
     font-weight: bold;
@@ -79,6 +84,14 @@ header li {
     padding-left: 10px;
 }
 
+/*----------  Important : Pour bien position le menu en position fixed avec les ances ----------*/
+
+:target:before {
+    content: '';
+    display: block;
+    height: 3.8em;          /* hauteur de la partie fixe */
+    margin: -3.8em 0 0;     /* moins la hauteur de la partie fixe */
+}
 
 /*=======================================================================================
 =                                       CONTENU                                         =
@@ -86,7 +99,7 @@ header li {
 
 /*----------  Important : peut-etre utilisé pour differents sites  ----------*/
 
-/* .container {
+/* main {
     padding: 0 15px;
     max-width: 1080px;
     margin-left: auto;
@@ -99,7 +112,7 @@ header li {
     padding-top: 60px;
     background: url(images/image-principale.jpg) no-repeat fixed 50% 50%;
     background-size: cover;
-    height: 600px;
+    height: 570px;
 }
 
 h1 {
@@ -131,18 +144,20 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 2.2em;
 }
 
 .texte-presentation p {
     text-align: center;
     padding: 0px 20px;
-    margin-bottom: 60px;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .texte-presentation p a {
-    text-decoration:underline;
-    color: #7451eb;;
+    text-decoration: underline;
+    color: #7451eb;
+    ;
 }
 
 /*=============================================
@@ -155,23 +170,30 @@ h1 {
     height: 70px;
     text-shadow: 1px 3px 2px bisque;
     font-size: 3.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.competences-contenu {
+    background-color: #FFEBCD;
+    padding: 50px 0 30px 0;
 }
 
 /*----------  Frontend  ----------*/
 
 .competences .titre-frontend {
     text-align: center;
-    background: #6495ED;
+    background: white;
     font-size: 1.8em;
-    margin-bottom: -1px;
-    margin: 0 10% 0 10%;
+    margin: 1% 10% 0 10%;
+    padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-radius: 50px 50px 0px 0px;
 }
 
 .frontend {
-    padding-top: 20px;
-    background: #6495ED;
+    /* padding-top: 20px; */
+    background: white;
     padding: 10px;
     border-radius: 0px 0px 50px 50px;
     padding-left: 10%;
@@ -198,18 +220,18 @@ h1 {
 
 .competences .titre-backend {
     text-align: center;
-    background: #90EE90;
+    background: white;
     font-size: 1.8em;
-    margin-bottom: -1px;
+    padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-radius: 50px 50px 0px 0px;
-    margin: 0 10% 0 10%;
+    margin: 5% 10% 0 10%;
 }
 
 .backend {
-    padding-top: 20px;
-    background: #90EE90;
-    padding: 20px;
+    /* padding-top: 20px; */
+    background: white;
+    padding: 10px;
     border-radius: 0px 0px 50px 50px;
     padding-left: 10%;
     display: flex;
@@ -235,17 +257,16 @@ h1 {
 
 .competences .titre-techno {
     text-align: center;
-    background: #9370DB;
+    background: white;
     font-size: 1.8em;
-    margin-bottom: -1px;
+    padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-radius: 50px 50px 0px 0px;
-    margin: 0 10% 0 10%;
+    margin: 5% 10% 0 10%;
 }
 
 .techno {
-    padding-top: 20px;
-    background: #9370DB;
+    background: white;
     padding: 10px;
     border-radius: 0px 0px 50px 50px;
     padding-left: 10%;
@@ -280,6 +301,7 @@ h1 {
     height: 70px;
     text-shadow: 1px 3px 2px bisque;
     font-size: 3.5em;
+    margin-top: 0px;
 }
 
 .projets-cartes {
@@ -410,12 +432,13 @@ h1 {
     align-items: center;
     background: url(images/contact/contact.jpg) no-repeat fixed 50% 10%;
     background-size: cover;
-    height: 300px;
+    height: 430px;
     color: white;
+    text-shadow: 1px 3px 2px black;
 }
 
-.contact h3 {
-    font-size: 1.5em;
+#contact h3 {
+    font-size: 1.6em;
     text-align: center;
     font-family: 'Alata';
 }
@@ -437,7 +460,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    padding: 50px;
+    padding: 30px;
 }
 
 footer h3 {
@@ -448,49 +471,75 @@ footer h3 {
 =                                       MEDIA QUERIES                                   =
 ========================================================================================*/
 
-/*---------- Ecran minimun à 420px ----------*/
+/*---------- Ecran minimun à 320px et Ecran maximum à 460px ----------*/
 
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 300px) and (max-width: 419px) {
+
+    header li {
+        font-size: 1em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    :target:before {
+        content: '';
+        display: block;
+        height: 6em;
+        margin: -6em 0 0;
+    }
+
+    .carte{
+        padding-bottom: 0.8em;
+    }
+
+}
+/*---------- Ecran minimun à 461px et Ecran maximum à 650px ----------*/
+
+@media only screen and (min-width: 420px) and (max-width: 650px) {
 
     header li {
         font-size: 1.5em;
     }
 
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    :target:before {
+        content: '';
+        display: block;
+        height: 7em;
+        margin: -7em 0 0;
+    }
+
     .texte-presentation img {
         margin-left: 2em;
-    }
-
-    .contact h3 {
-        font-size: 1.2em;
-    }
-
-    .contact a {
-        font-size: 2em;
-    }
-}
-
-/*---------- Ecran maximum à 420px ----------*/
-
-@media only screen and (max-width: 419px) {
-
-    header li {
-        font-size: 1.1em;
-    }
-
-    /* .image-principale {
-       object-position: bottom;
-    } */
-
-    .texte-presentation h2 {
-        font-size: 1.7em;
-    }
-
-    .texte-presentation p {
-        font-size: 1.3em;
-    }
-
-    .texte-presentation img {
-        margin-left: 1.8em;
     }
 
     .contact h3 {

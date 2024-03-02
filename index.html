@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon/favicon-32x32.png">
 
     <link href="https://fonts.googleapis.com/css?family=Ranga&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Développeur web - Brendan Buslig - Portfolio</title>
 </head>
@@ -33,28 +33,32 @@
             </ul>
         </nav>
         <!-- Image Principale -->
-        <div class="image-principale" id="accueil">
+        <div class="image-principale">
             <h1>Bienvenue sur mon Portfolio</h1>
         </div>
     </header>
     <!-- Contenu principal -->
     <main>
         <!-- Section Présentation -->
-        <section class="presentation">
+        <section class="presentation" id="accueil">
             <div class="texte-presentation">
                 <img src="images/brendan.png" alt="Brendan Buslig">
                 <h2>Développeur web</h2>
-                <p>Bonjour, je m'appelle Brendan Buslig, je suis développeur web et créateur de site internet. <br>
-                    Ayant toujours été passionné par l'informatique, j'ai d'abord fait de la maintenance et du réseaux
-                    informatique puis j'ai décidé d'élargir mes compétences dans le développement web en suivant une formation auprès
-                    <a href="https://openclassrooms.com/">d'OpenClassrooms</a>, célèbre plateforme de formations en ligne. <br>
-                    Consciencieux, curieux et rigoureux dans mes projets, j'aime apprendre et acquérir de nouvelles compétences 
+                <p>Bonjour, je m'appelle Brendan Buslig, je suis développeur web et créateur de site internet. </p>
+                <p> Ayant toujours été passionné par l'informatique, j'ai d'abord fait de la maintenance et du réseau
+                    informatique puis j'ai décidé d'élargir mes compétences dans le développement web en suivant une
+                    formation auprès
+                    <a href="https://openclassrooms.com/" target="_blank">d'OpenClassrooms</a>, célèbre plateforme de formations en
+                    ligne.
+                </p>
+                <p> Consciencieux, curieux et rigoureux dans mes projets, j'aime apprendre et acquérir de nouvelles
+                    compétences
                     et de nouvelles technologies afin de pouvoir répondre à tous vos besoins.
                 </p>
             </div>
         </section>
         <!-- Section Compétences -->
-        <section id="competences" class="competences">
+        <section id="competences" class="competences ">
             <h2 class="competences-titre">Compétences</h2>
             <!-- Section Front-end -->
             <div class="competences-contenu">
@@ -132,8 +136,8 @@
             </div>
         </section>
         <!-- Section Projets -->
-        <section class="projets">
-            <h2 id="projets" class="projets-titre">Projets</h2>
+        <section class="projets" id="projets">
+            <h2 class="projets-titre">Projets</h2>
             <div class="projets-cartes">
                 <!-- Projet Reservia -->
                 <div class="projet-carte">
@@ -149,7 +153,7 @@
                     </div>
                 </div>
                 <!-- Projet Ohmyfood -->
-                <div class="projet-carte">
+                <div class="projet-carte carte">
                     <img src="images/projets/ohmyfood.png" class="image-ohmygood"
                         alt="image ohmyfood portfolio Brendan Buslig">
                     <div class="projet-contenu">
@@ -190,7 +194,7 @@
                     </div>
                 </div>
                 <!-- Projet Piiquante -->
-                <div class="projet-carte">
+                <div class="projet-carte carte">
                     <img src="images/projets/piiquante.png" class="image-piiquante"
                         alt="image piiquante portfolio Brendan Buslig">
                     <div class="projet-contenu">
@@ -220,7 +224,7 @@
             </div>
         </section>
         <!-- Contact -->
-        <div id="contact" class="contact">
+        <div class="contact" id="contact">
             <h3>Si vous voulez me contacter <br>
                 pour un projet personnel ou professionnel<br>
                 Vous pouvez m'envoyer un email en cliquant sur l'icône ci-dessous :
