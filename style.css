@@ -471,7 +471,7 @@ footer h3 {
 =                                       MEDIA QUERIES                                   =
 ========================================================================================*/
 
-/*---------- Ecran minimun à 320px et Ecran maximum à 460px ----------*/
+/*---------- Ecran minimun à 300px et Ecran maximum à 419px ----------*/
 
 @media only screen and (min-width: 300px) and (max-width: 419px) {
 
@@ -502,14 +502,23 @@ footer h3 {
         margin: -6em 0 0;
     }
 
+    .image-principale {
+        background: url(images/image-principale-mobile.jpg) no-repeat fixed 50% 50%;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
     .carte{
         padding-bottom: 0.8em;
     }
 
 }
-/*---------- Ecran minimun à 461px et Ecran maximum à 650px ----------*/
+/*---------- Ecran minimun à 420px et Ecran maximum à 750px ----------*/
 
-@media only screen and (min-width: 420px) and (max-width: 650px) {
+@media only screen and (min-width: 420px) and (max-width: 750px) {
 
     header li {
         font-size: 1.5em;
@@ -536,6 +545,15 @@ footer h3 {
         display: block;
         height: 7em;
         margin: -7em 0 0;
+    }
+
+    .image-principale {
+        background: url(images/image-principale-mobile.jpg) no-repeat fixed 50% 50%;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 5em;
     }
 
     .texte-presentation img {
