@@ -89,8 +89,10 @@ nav ul li a:hover {
 :target:before {
     content: '';
     display: block;
-    height: 3.8em;          /* hauteur de la partie fixe */
-    margin: -3.8em 0 0;     /* moins la hauteur de la partie fixe */
+    height: 3.8em;
+    /* hauteur de la partie fixe */
+    margin: -3.8em 0 0;
+    /* moins la hauteur de la partie fixe */
 }
 
 /*=======================================================================================
@@ -129,15 +131,9 @@ h1 {
 =============================================*/
 
 .presentation {
+    overflow: hidden;
     background-color: #FFEBCD;
     padding: 10px 0 30px 0;
-}
-
-.texte-presentation img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    float: left;
 }
 
 .texte-presentation h2 {
@@ -147,9 +143,18 @@ h1 {
     font-size: 2.2em;
 }
 
+.texte-presentation img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
 .texte-presentation p {
     text-align: center;
-    padding: 0px 20px;
+    padding: 0px 0px 0px 10px;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -157,7 +162,6 @@ h1 {
 .texte-presentation p a {
     text-decoration: underline;
     color: #7451eb;
-    ;
 }
 
 /*=============================================
@@ -484,12 +488,12 @@ footer h3 {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    
+
     nav ul {
         display: flex;
         justify-content: center;
     }
-    
+
     .logo {
         display: flex;
         justify-content: center;
@@ -511,11 +515,12 @@ footer h3 {
         font-size: 4em;
     }
 
-    .carte{
-        padding-bottom: 0.8em;
+    .carte {
+        padding-bottom: 1.2em;
     }
 
 }
+
 /*---------- Ecran minimun à 420px et Ecran maximum à 750px ----------*/
 
 @media only screen and (min-width: 420px) and (max-width: 750px) {
@@ -529,17 +534,17 @@ footer h3 {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    
+
     nav ul {
         display: flex;
         justify-content: center;
     }
-    
+
     .logo {
         display: flex;
         justify-content: center;
     }
-    
+
     :target:before {
         content: '';
         display: block;
